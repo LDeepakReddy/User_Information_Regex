@@ -11,8 +11,13 @@ public class UserMain {
         String firstName = scan.next();
         System.out.println("Enter last name");
         String lastName = scan.next();
+
+        System.out.println("Enter email id");
+        String emailId=scan.next();
+
         compare.validateFirstName(firstName);
         compare.validateLastName(lastName);
+        compare.validateEmail(emailId);
 
 
     }
