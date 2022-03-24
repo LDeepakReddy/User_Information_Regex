@@ -1,4 +1,4 @@
-Welcome to user registration.
+Welcome to user information.
 
 1.User need to enter a valid First Name.
 
