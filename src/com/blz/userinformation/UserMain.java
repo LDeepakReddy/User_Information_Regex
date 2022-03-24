@@ -5,23 +5,29 @@ import java.util.Scanner;
 public class UserMain {
     public static void main(String[] args) {
         System.out.println("Welcome to the user information program");
+        UserRegistration compare = new UserRegistration();
 
         System.out.println("Enter first name");
-        UserRegistration compare = new UserRegistration();
         Scanner scan = new Scanner(System.in);
         String firstName = scan.next();
+
         System.out.println("Enter last name");
         String lastName = scan.next();
 
         System.out.println("Enter email id");
-        String emailId=scan.next();
+        String emailId = scan.next();
+
         System.out.println("Enter mobile number");
-        String mobileNUmber =scan.next();
+        String mobileNUmber = scan.next();
+
+        System.out.println("Enter password");
+        String passWord = scan.next();
 
         compare.validateFirstName(firstName);
         compare.validateLastName(lastName);
         compare.validateEmail(emailId);
         compare.validateMobilenumber(mobileNUmber);
+        compare.validatePassword(passWord);
 
 
     }
