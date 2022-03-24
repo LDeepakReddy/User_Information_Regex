@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class UserMain {
     public static void main(String[] args) {
         System.out.println("Welcome to the user information program");
+
         System.out.println("Enter first name");
         UserRegistration compare = new UserRegistration();
         Scanner scan = new Scanner(System.in);
@@ -14,10 +15,13 @@ public class UserMain {
 
         System.out.println("Enter email id");
         String emailId=scan.next();
+        System.out.println("Enter mobile number");
+        String mobileNUmber =scan.next();
 
         compare.validateFirstName(firstName);
         compare.validateLastName(lastName);
         compare.validateEmail(emailId);
+        compare.validateMobilenumber(mobileNUmber);
 
 
     }
