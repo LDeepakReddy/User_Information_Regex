@@ -12,6 +12,7 @@ public class UserMain {
         System.out.println("3 to validate email id");
         System.out.println("4 to validate mobile number");
         System.out.println("5 to validate Password");
+        System.out.println("6 to validate  Emails in the list that provided");
         int chooseOption = scan.nextInt();
 
         switch (chooseOption) {
@@ -39,7 +40,31 @@ public class UserMain {
                 System.out.println("Enter password");
                 String passWord = scan.next();
                 compare.validatePassword(passWord);
+                break;
+            case 6:
+                System.out.println("validating all sample emails in the list");
+                String[] emails = {
+                        "abc@yahoo.com",
+                        "abc-100@yahoo.com",
+                        "abc.100@yahoo.com",
+                        "abc111@abc.com",
+                        "abc-100@abc.net",
+                        "abc.100@abc.com.au",
+                        "abc@1.com",
+                        "abc@gmail.com.com",
+                        "abc+100@gmail.com",
 
+                        "abc.@gmail.com",
+                        "abc123@.com",
+                        "abc123@gmail.a",
+                        "abc()*@gmail.com",
+                        "abc@%*.com",
+                        "abc..2002@gmail.com",
+                        "abc@gmail.com.1a",
+                        "abc.@gmail.com"
+                };
+                UserRegistration.validateEmailsList(emails);
+                break;
         }
 
     }

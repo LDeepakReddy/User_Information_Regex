@@ -9,7 +9,7 @@ public class UserRegistration {
     public final String lastName = "^[A-Z]{1}[a-z]{3,}$";
     public final String email = "^[a-z]{3,}(.[a-z]{3,})*@[a-z]{2,}.[a-z]{2,3}([.+_-][a-z]{2})*$";
     public final String mobileNumber = "^[0-9]{2}\s?[0-9]{10}$";
- public final String passWord= "(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]*[@#$%_!^&*][0-9a-zA-Z]*";
+    public final String passWord = "(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]*[@#$%_!^&*][0-9a-zA-Z]*";
 
     public void validateFirstName(String userFirstName) {
         Pattern pattern = Pattern.compile(firstName);
@@ -55,6 +55,17 @@ public class UserRegistration {
             System.out.println("Entered password is " + userPassword + " is valid");
         else
             System.out.println("Entered password is " + userPassword + " is invalid");
+    }
+
+    public static void validateEmailsList(String[] emailList) {
+        for (int i = 0; i < emailList.length; i++) {
+            Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{1,}[.+-]?[a-zA-Z0-9]{1,}?[@][a-zA-Z0-9]{1,}([.][a-zA-Z]{2,}){1,}$");
+            Matcher matcher = pattern.matcher(emailList[i]);
+            if (matcher.matches())
+                System.out.println(emailList[i] + " : This Email id is valid");
+            else
+                System.out.println(emailList[i] + " : This Email id is Invalid");
+        }
     }
 
 
